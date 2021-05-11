@@ -45,3 +45,23 @@ public static class Program
 Obs: O problema desse modelo é que se estivermos utilizando o Entity Framework como ORM, teremos um problema de design pattern para gerar as Migrations em um modelo DDD.
 
 <br>
+
+
+#### Usando o construtor de host da web em vez do construtor de host genérico: 
+
+```
+public class Program
+{
+    public static void Main(string[] args) =>
+        new WebHostBuilder()
+            .UseKestrel()
+            .UseContentRoot(Directory.GetCurrentDirectory())
+            .UseIISIntegration()
+            .UseStartup<Startup>()
+            .UseUrls("http://localhost:5001/")
+            .Build()
+            .Run();
+}
+```
+
+Obs: Teremos o mesmo problema de Migrations apontado no item anterior.

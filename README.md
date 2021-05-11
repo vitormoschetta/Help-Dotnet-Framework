@@ -2,7 +2,8 @@
 
 ## Formas de setar a porta de uma aplicaço dotnet
 
-<https://stackoverflow.com/questions/37365277/how-to-specify-the-port-an-asp-net-core-application-is-hosted-on>
+<https://stackoverflow.com/questions/37365277/how-to-specify-the-port-an-asp-net-core-application-is-hosted-on>    
+<https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/host/web-host?view=aspnetcore-5.0#server-urls>
 
 #### Usando appsettings.json:
 ```

@@ -4,7 +4,7 @@
 
 <https://stackoverflow.com/questions/37365277/how-to-specify-the-port-an-asp-net-core-application-is-hosted-on>
 
-##### Usando appsettings.json:
+#### Usando appsettings.json:
 ```
 {
   "Urls": "http://localhost:5001"
@@ -13,18 +13,20 @@
 
 Obs: O método `CreateHostBuilder` deve utilizar o retorno padrão `IHostBuilder` e não `IWebHostBuilder`.
 
+<br>
 
 
-##### Usando argumentos de linha de comando:
+#### Usando argumentos de linha de comando:
 ```
 dotnet run --urls=http://localhost:9001/
 ```
 
 Obs: serve tanto para executar o código fonte quanto o binário.
 
+<br>
 
 
-##### Usando UseUrls(), se preferir fazê-lo programaticamente: 
+#### Usando UseUrls(), se preferir fazê-lo programaticamente: 
 ``` 
 public static class Program
 {
@@ -41,3 +43,5 @@ public static class Program
 ```
 
 Obs: O problema desse modelo é que se estivermos utilizando o Entity Framework como ORM, teremos um problema de design pattern para gerar as Migrations em um modelo DDD.
+
+<br>
